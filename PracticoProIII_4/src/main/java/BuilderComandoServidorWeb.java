@@ -18,9 +18,6 @@ public class BuilderComandoServidorWeb {
                 System.out.println("Entre al rectangulo");
                 return new ComandoImagen(cmdGet);
         }
-        if (cmdGet=="/favicon.ico"){
-            return new ComandoVacio(cmdGet);
-        }
         if (cmdGet == null || cmdGet.isEmpty()) {
             return new ComandoVacio(cmdGet);
         }
