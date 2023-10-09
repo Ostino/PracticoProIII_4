@@ -7,12 +7,12 @@ import java.net.Socket;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ProcesarPeticion {
-    private static final Logger logger = LogManager.getLogger(ProcesarPeticion.class);
+public class ProcesadorPeticion {
+    private static final Logger logger = LogManager.getLogger(ProcesadorPeticion.class);
     public static final String CRLF = "\r\n";
     private final Socket client;
 
-    public ProcesarPeticion(Socket client) {
+    public ProcesadorPeticion(Socket client) {
         this.client = client;
     }
 

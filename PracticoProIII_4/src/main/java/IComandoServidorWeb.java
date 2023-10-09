@@ -1,3 +1,4 @@
+
 public interface IComandoServidorWeb {
     public void ejecutar();
     public boolean esResultadoTexto();

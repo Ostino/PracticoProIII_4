@@ -13,17 +13,16 @@ import java.net.Socket;
  * /imagen
  * /otro : retornará con error cualquier otra cosa
  */
-public class test {
+public class ServidorWebSimple {
     private final int puerto;
     private final Logger logger = LogManager.getRootLogger();
 
-    public test(int puerto) {
+    public ServidorWebSimple(int puerto) {
         this.puerto = puerto;
-
     }
 
     public static void main(String[] args) {
-        test servidor = new test(8080);
+        ServidorWebSimple servidor = new ServidorWebSimple(6969);
         servidor.start();
     }
 
@@ -42,7 +41,7 @@ public class test {
                 // Se espera una conexion
                 Socket clt = socketServer.accept();
                 // Se crea un objeto de la clase que se encarga de procesar la peticion
-                ProcesarPeticion procesadorPeticion = new ProcesarPeticion(clt);
+                ProcesadorPeticion procesadorPeticion = new ProcesadorPeticion(clt);
                 // Se procesa la peticion
                 procesadorPeticion.procesarPeticion();
             }
