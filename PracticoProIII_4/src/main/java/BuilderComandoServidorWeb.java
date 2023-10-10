@@ -13,7 +13,8 @@ public class BuilderComandoServidorWeb {
         Fill.find();
         String operacion= Fill.group(2);
         System.out.println(operacion);
-            if ((operacion.trim().equals("rectangulo") || operacion.trim().equals("linea"))|| operacion.trim().equals("imagen")) {
+            if ((operacion.trim().equals("rectangulo") || operacion.trim().equals("linea"))||
+                    operacion.trim().equals("imagen")) {
                 System.out.println("Entre al rectangulo");
                 return new ComandoImagen(cmdGet);
         }

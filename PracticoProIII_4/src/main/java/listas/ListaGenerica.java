@@ -3,6 +3,15 @@ package listas;
 import java.util.Iterator;
 
 public class ListaGenerica<E> implements Iterable<E> {
+    public int getSolo() {
+        return solo;
+    }
+
+    public void setSolo(int solo) {
+        this.solo = solo;
+    }
+
+    private int solo =0;
     private Nodo<E> raiz;
     private int tamano;
 
